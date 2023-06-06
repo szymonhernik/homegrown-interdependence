@@ -28,7 +28,9 @@
 @import "components/mermaid";
 @import "components/search";
 @import "components/tables";
-@import "layouts/footer";
+// changed to footers from footer
+@import "layouts/footers";
+
 @import "layouts/header";
 @import "layouts/pages";
 @import "layouts/posts";
