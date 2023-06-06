@@ -7,18 +7,6 @@ draft: false
 images: []
 ---
 
+## Contact us
+
 {{< email user="hello" domain="getdoks.org" >}}
-
-## create
-
-Create new content for your site:
-
-```bash
-npm run create [path] [flags]
-```
-
-See also the Hugo docs: [hugo new](https://gohugo.io/commands/hugo_new/).
-
-### Docs based tree
-
-Create a docs based tree — with a single command:

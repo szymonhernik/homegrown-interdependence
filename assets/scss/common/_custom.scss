@@ -1,28 +1,70 @@
 /** Custom styles */
 
-// ::-webkit-scrollbar {
-//   width: 0.5rem;
-//   background-color: #f5f5f5;
-// }
-body .navbar {
-  background-color: #fffeda;
-}
-body .offcanvas {
-  background-color: #fffeda;
+$body-font-family: "Trebuchet MS";
+//  Custom GENERAL styles
+//  Custom GENERAL styles
+//  Custom GENERAL styles
+body {
+  background-color: $body-bg;
+  font-family: $body-font-family;
 }
 
-.list-flex {
+//  Custom CONTENT styles
+//  Custom CONTENT styles
+//  Custom CONTENT styles
+
+.content {
+  background-color: $content-bg;
+  min-height: 100vh;
+}
+
+//  Custom HEADER styles
+//  Custom HEADER styles
+//  Custom HEADER styles
+.navbar {
+  background-color: $light-yellow;
+  font-size: $font-size-xl;
+}
+body .offcanvas {
+  background-color: $light-yellow;
+}
+
+.navbar .container-fluid {
+  padding-left: 0px !important;
+}
+
+.navbar-brand {
+  display: flex;
+  position: relative;
+  padding-bottom: 0 !important;
+}
+.triangle-container {
+  width: 0;
+  height: 100px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid $content-bg; /* Change the color to suit your needs */
+}
+
+.triangle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px; /* Adjust the size of the SVG icon as needed */
+  height: 60px;
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+}
+
+//  Custom FOOTER styles
+//  Custom FOOTER styles
+//  Custom FOOTER styles
+
+footer .list-flex {
   padding: 0;
   margin: 0;
   display: flex;
-}
-
-.container-fluid {
-  // padding: 0;
-}
-
-//  Custom header styles
-
-.navbar-brand img.header-logo {
-  width: 100px;
 }

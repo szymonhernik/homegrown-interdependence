@@ -1,14 +1,14 @@
-[[docs]]
-  name = "Prologue"
-  weight = 10
-  identifier = "prologue"
-  url = "/docs/prologue/"
+# [[docs]]
+#  name = "Prologue"
+#  weight = 10
+#  identifier = "prologue"
+#  url = "/docs/prologue/"
 
-[[docs]]
-  name = "Help"
-  weight = 60
-  identifier = "help"
-  url = "/docs/help/"
+# [[docs]]
+#  name = "Help"
+#  weight = 60
+#  identifier = "help"
+#  url = "/docs/help/"
 
 # [[docs]]
 #   name = "Lorem"
@@ -59,26 +59,21 @@
 [[main]]
   name = "News"
   url = "/news/"
+  identifier = "news"
   weight = 30
 
 [[main]]
   name = "Roadmap"
   weight = 40
-  identifier = "get-started"
-  url = "/docs/prologue/introduction/"
+  identifier = "roadmap"
+  url = "/roadmap/"
 
 [[main]]
   name = "Dictionary"
   weight = 50
   identifier = "dictionary"
-  url = "/docs/prologue/quick-start/"
+  url = "/dictionary/"
 
-# [[main]]
-#   name = "Tutorial"
-#   weight = 50
-#   identifier = "tutorial"
-#   url = "https://getdoks.org/tutorial/introduction/"
-#   parent = "get-started"
 
 #[[social]]
 # name = "GitHub"
@@ -95,5 +90,5 @@
 
 [[footer]]
   name = "Our team"
-  url = "/privacy-policy/"
+  url = "/our-team/"
   weight = 10
