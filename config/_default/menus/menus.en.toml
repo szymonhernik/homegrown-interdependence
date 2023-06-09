@@ -22,11 +22,7 @@
   identifier = "lorem"
   url = "/guide/lorem/"
 
-[[tutorial]]
-  name = "Lorem"
-  weight = 10
-  identifier = "lorem"
-  url = "/tutorial/lorem/"
+
 
 
 
@@ -51,9 +47,9 @@
   weight = 10
 
 [[main]]
-  name = "Tutorials"
-  url = "/tutorials/prologue/introduction/"
-  identifier = "tutorials"
+  name = "Tutorial"
+  url = "/tutorial/prologue/introduction/"
+  identifier = "tutorial"
   weight = 20
 
 [[main]]
