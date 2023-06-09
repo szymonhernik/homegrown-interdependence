@@ -51,7 +51,7 @@
   weight = 10
 
 [[main]]
-  name = "Tutorial"
+  name = "Tutorials"
   url = "/docs/prologue/introduction/"
   identifier = "docs"
   weight = 20
