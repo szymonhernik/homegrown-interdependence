@@ -52,8 +52,8 @@
 
 [[main]]
   name = "Tutorials"
-  url = "/docs/prologue/introduction/"
-  identifier = "docs"
+  url = "/tutorials/prologue/introduction/"
+  identifier = "tutorials"
   weight = 20
 
 [[main]]
