@@ -71,6 +71,16 @@ footer .list-flex {
 
 // Tutorial Sidebar styling
 
+.collapsible-sidebar {
+  margin: 2.125rem 0 14rem 0;
+}
+
+// buttons
+.btn-toggle {
+  // display: block;
+  // text-align: left !important;
+}
+
 @media (max-width: 767px) {
   /* Empty media breakpoint for mobile screens */
 }
