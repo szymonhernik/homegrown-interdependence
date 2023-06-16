@@ -82,3 +82,6 @@ rel  = "sitemap"
     [[related.indices]]
     name = "date"
     weight = 10
+
+[sectionTemplates]
+  dictionary = "layouts/dictionary/single.html"
