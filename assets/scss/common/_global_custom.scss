@@ -120,17 +120,19 @@ body {
 
 @include media-breakpoint-up(lg) {
   .docs-sidebar {
-    order: 0;
+    order: 1;
     border-right: 1px solid $gray-200;
   }
 
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .docs-sidebar {
       position: -webkit-sticky;
+      top: 14rem;
       position: sticky;
-      top: 8rem;
+      left: 0;
+      background-color: #f6f6f6;
       z-index: 1000;
-      height: calc(100vh - 4rem);
+      height: calc(100vh - 14rem);
     }
 
     .docs-sidebar-top {
@@ -186,7 +188,8 @@ body {
 }
 
 .docs-content {
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
+
   order: 1;
 }
 

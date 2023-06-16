@@ -68,3 +68,30 @@ footer .list-flex {
   margin: 0;
   display: flex;
 }
+
+// Tutorial Sidebar styling
+
+@media (max-width: 767px) {
+  /* Empty media breakpoint for mobile screens */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Empty media breakpoint for small screens */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Empty media breakpoint for medium screens */
+  // .docs-content {
+  //   margin-left: 32%;
+  // }
+}
+
+@media (min-width: 1200px) {
+  /* Empty media breakpoint for large screens */
+  // .docs-content {
+  //   margin-left: 25%;
+  // }
+  // .docs-sidebar {
+  //   // max-width: 320px;
+  // }
+}

@@ -48,7 +48,7 @@
 
 [[main]]
   name = "Tutorial"
-  url = "/tutorial/prologue/introduction/"
+  url = "/tutorial/0-before-everything/0-1/"
   identifier = "tutorial"
   weight = 20
 
