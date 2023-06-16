@@ -53,6 +53,12 @@
   weight = 20
 
 [[main]]
+  name = "Newsletter"
+  url = "/newsletter/"
+  identifier = "newsletter"
+  weight = 25
+
+[[main]]
   name = "News"
   url = "/news/"
   identifier = "news"
