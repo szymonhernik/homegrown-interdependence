@@ -17,10 +17,17 @@
 </div>
 <div class="page-links d-none d-xl-block">
   <h3>[Next chapter] {{ i18n "on-this-page" }}</h3>
-  {{ if eq .Site.Params.options.scrollSpy true -}}
-    {{ .TableOfContents | replaceRE "<nav id=\"TableOfContents\">" "<nav id=\"toc\">" | safeHTML }}
-  {{ else -}}
-    {{ .TableOfContents }}
+  {{ if or .Prev -}}
+<div class="">
+  <!-- https://www.feliciano.tech/blog/custom-sort-hugo-single-pages/ -->
+  {{ $pages := where site.RegularPages "Section" .Section -}} {{ with $pages.Prev . -}}
+  <a class="ms-auto" href="{{ .RelPermalink }}">
+    <div class="">
+      <div class="">{{ .Title }} &rarr;</div>
+    </div>
+  </a>
   {{ end -}}
+</div>
+{{ end -}}
 </div>
 {{ end -}}
