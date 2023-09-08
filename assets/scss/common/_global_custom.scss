@@ -189,7 +189,6 @@ body {
 
 .docs-content {
   padding-bottom: 8rem;
-
   order: 1;
 }
 
@@ -287,5 +286,19 @@ body {
 @include media-breakpoint-up(md) {
   .modal-backdrop.show {
     opacity: 0;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .docs-content {
+    overflow-y: scroll;
+  }
+
+  .docs-content::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .docs-content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

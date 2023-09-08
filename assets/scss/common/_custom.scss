@@ -74,18 +74,6 @@ footer .list-flex {
 .collapsible-sidebar {
   margin: 2.125rem 0 14rem 0;
 }
-.project-name {
-  // position: sticky;
-  // top: 10px;
-  // background-color: #f6f6f6;
-  // z-index: 100000000;
-}
-
-// buttons
-.btn-toggle {
-  // display: block;
-  // text-align: left !important;
-}
 
 @media (max-width: 767px) {
   /* Empty media breakpoint for mobile screens */
@@ -97,17 +85,8 @@ footer .list-flex {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Empty media breakpoint for medium screens */
-  // .docs-content {
-  //   margin-left: 32%;
-  // }
 }
 
 @media (min-width: 1200px) {
   /* Empty media breakpoint for large screens */
-  // .docs-content {
-  //   margin-left: 25%;
-  // }
-  // .docs-sidebar {
-  //   // max-width: 320px;
-  // }
 }
