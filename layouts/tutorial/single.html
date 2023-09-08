@@ -24,13 +24,14 @@
 					</ol>
 				</nav>
 			{{ end }}
+			{{ partial "extra/slug-progress"}}
 			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-			{{ if ne .Params.toc false -}}
+			<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
+			<!-- {{ if ne .Params.toc false -}}
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
-			{{ end -}}
+			{{ end -}} -->
 			{{ .Content }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}
@@ -40,14 +41,14 @@
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
 			</div>
-			{{ partial "main/docs-navigation.html" . }}
-			<!--
+			<!-- {{ partial "main/docs-navigation.html" . }} -->
+			
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
 				{{ partial "main/docs-navigation.html" . }}
 			{{ else -}}
 				<div class="my-n3"></div>
 			{{ end -}}
-			-->
+			
 		</main>
 	</div>
 {{ end }}

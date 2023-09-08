@@ -16,14 +16,14 @@
   </div>
 </div>
 <div class="page-links d-none d-xl-block">
-  <h3>[Next chapter] {{ i18n "on-this-page" }}</h3>
+  <h3>Next step</h3>
   {{ if or .Prev -}}
 <div class="">
   <!-- https://www.feliciano.tech/blog/custom-sort-hugo-single-pages/ -->
   {{ $pages := where site.RegularPages "Section" .Section -}} {{ with $pages.Prev . -}}
   <a class="ms-auto" href="{{ .RelPermalink }}">
     <div class="">
-      <div class="">{{ .Title }} &rarr;</div>
+      <div class="docs-toc-title">{{ .Title }} </div>
     </div>
   </a>
   {{ end -}}

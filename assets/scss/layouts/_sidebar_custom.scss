@@ -37,10 +37,25 @@
 
 .docs-links h3,
 .page-links h3 {
-  text-transform: uppercase;
-  font-size: $font-size-base;
+  // text-transform: uppercase;
+  font-size: $font-size-lg;
+  font-family: $headings-functionality-font-family;
   margin: 1.25rem 0 0.5rem;
   padding: 1.5rem 0 0;
+}
+.page-links .docs-toc-title::before {
+  content: "↪️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.page-links .docs-toc-title {
+  padding: 0 30px;
+  position: relative;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: $body-color-light;
+  line-height: 1rem;
 }
 
 @include media-breakpoint-up(lg) {

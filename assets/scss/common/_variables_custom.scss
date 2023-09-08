@@ -66,6 +66,7 @@ $navbar-light-toggler-icon-bg: none;
 
 $body-bg: $light-yellow;
 $content-bg: $gray-200;
+$body-color-light: #a3a3a3;
 $body-color: $black;
 
 // Links
@@ -116,7 +117,7 @@ $font-family-monospace: sfmono-regular, menlo, monaco, consolas,
 $font-family-base: $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 0.875rem; // Assumes the browser default, typically `16px`
 $font-size-xl: $font-size-base * 1.375;
 $font-size-lg: $font-size-base * 1.25;
 $font-size-md: $font-size-base * 1.125;
@@ -124,8 +125,19 @@ $font-size-sm: $font-size-base * 0.875;
 
 // $line-height-base:            1.5;
 
-$headings-font-family: null;
-$headings-font-weight: 700;
+// $headings-font-family: Georgia;
+// $headings-font-weight: 300;
+// $headings-font-family: "Trebuchet MS";
+// $headings-font-weight: 700;
+
+$headings-font-family: "Georgia";
+$headings-font-weight: 300;
+
+$headings-functionality-font-family: "Trebuchet MS";
+$headings-functionality-font-weight: 700;
+
+// $headings-in-text-tutorial-font-family: "Georgia";
+// $headings-in-text-tutorial-font-weight: 300;
 
 $lead-font-weight: 400;
 

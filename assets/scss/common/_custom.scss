@@ -1,6 +1,18 @@
 /** Custom styles */
 
 $body-font-family: "Trebuchet MS";
+
+//  Custom Typography styles
+//  Custom Typography styles
+//  Custom Typography styles
+
+h1.project-name {
+  font-size: 24px;
+  font-family: $headings-functionality-font-family;
+  font-weight: $headings-functionality-font-weight;
+  // width: 86%;
+}
+
 //  Custom GENERAL styles
 //  Custom GENERAL styles
 //  Custom GENERAL styles
@@ -18,6 +30,10 @@ body {
   min-height: 100vh;
 }
 
+.docs-content {
+  padding-left: 72px;
+  padding-right: 72px;
+}
 //  Custom HEADER styles
 //  Custom HEADER styles
 //  Custom HEADER styles
