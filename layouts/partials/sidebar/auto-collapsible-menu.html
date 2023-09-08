@@ -1,0 +1,65 @@
+<!-- Auto collapsible section menu -->
+<!-- prettier-ignore -->
+<ul class="list-unstyled collapsible-sidebar">
+  {{ $currentPage := . -}}
+  {{ $section := $currentPage.Section -}}
+  {{ $counter := 0 }}
+  {{ range (where .Site.Sections "Section" "in" $section) }}
+    {{ range .Sections }}
+      {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+          {{ $counter }}. {{ .Title }}
+        </button>
+        {{ $counter = add $counter 1 }}
+        <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            {{ $counterInner := 1 }}
+            {{ range .Pages }}
+            
+              {{ if .IsNode }}
+              
+                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                <li class="my-1 ms-3">
+                  <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                    {{ .Title }}
+                  </button>
+                  <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      {{ range .Pages }}
+                        {{ if .IsNode }}
+                          {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                          <li class="my-1 ms-3">
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                              {{ .Title }}
+                            </button>
+                            <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                {{ range .Pages }}
+                                  {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                                  <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                {{ end }}
+                              </ul>
+                            </div>
+                          </li>
+                        {{ else }}
+                          {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                          <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </div>
+                </li>
+              {{ else }}
+              
+                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}"> {{ sub $counter 1 }}-{{ $counterInner }}. {{ .Title }}</a></li>
+                {{ $counterInner = add $counterInner 1 }}
+                {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
