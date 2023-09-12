@@ -101,6 +101,10 @@ footer .list-flex {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Empty media breakpoint for medium screens */
+  .docs-content {
+    padding-left: 42px !important;
+    padding-right: 42px !important;
+  }
 }
 
 @media (min-width: 1200px) {
