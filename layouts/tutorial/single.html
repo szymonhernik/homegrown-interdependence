@@ -32,7 +32,57 @@
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
 			{{ end -}} -->
+
+			<!-- Section at the bottom of each tutorial with: difficulty, what you need, time, related reading -->
+			
+			<section class="tutorial-info">
+				<div class="">
+					<div class="difficulty">
+						<strong>Difficulty</strong>
+						<span>{{ .Params.difficulty }}</span>
+					</div>
+					<div class="time">
+						<strong>Time:</strong>
+						<span>{{ .Params.time }}</span>
+					</div>
+
+				</div>
+				<div class="">
+					<div class="">
+						<div class="">
+							<h1>In this chapter:</h1>
+							<p>{{ .Params.inthischapter }}</p>
+						</div>
+						<div class="">
+							<strong>Related reading:</strong>
+							{{ range .Params.relatedreading }}
+								<li>{{ . | markdownify}}</li>
+							{{ end }}
+						</div>
+					</div>
+					<div class="">
+						<div class="">
+							<h1>What you need:</h1>
+							<ul>
+								{{ range .Params.whatyouneed }}
+								<li>{{ . | markdownify}}</li>
+								{{ end }}
+							</ul> 
+						</div>
+					</div>
+				</div>
+					
+
+			</section>
+			<section>
+					
+				
+		
+			  
+			</section>
+			<!-- end of section -->
 			{{ .Content }}
+			
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if .Site.Params.lastMod -}}
 					{{ partial "main/last-modified.html" . }}

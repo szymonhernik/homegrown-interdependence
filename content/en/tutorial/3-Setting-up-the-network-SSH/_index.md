@@ -1,5 +1,5 @@
 ---
-title: "3. Setting up the network: SSH"
+title: "Setting up the network: SSH"
 description: "Test test."
 lead: ""
 date: 2020-10-06T08:49:15+00:00
