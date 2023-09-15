@@ -93,6 +93,13 @@ footer .list-flex {
 
 @media (max-width: 767px) {
   /* Empty media  for mobile screens */
+
+  .content .row {
+    margin: auto 0;
+  }
+  .docs-content {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
