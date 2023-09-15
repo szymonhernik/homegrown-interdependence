@@ -36,34 +36,34 @@
 			<!-- Section at the bottom of each tutorial with: difficulty, what you need, time, related reading -->
 			
 			<section class="tutorial-info">
-				<div class="">
-					<div class="difficulty">
+				<div class="d-inline-flex flex-row bg-light p-4 w-auto ">
+					<div class="difficulty ">
 						<strong>Difficulty</strong>
 						<span>{{ .Params.difficulty }}</span>
 					</div>
-					<div class="time">
+					<div class="time ">
 						<strong>Time:</strong>
 						<span>{{ .Params.time }}</span>
 					</div>
 
 				</div>
-				<div class="">
-					<div class="">
+				<div class="d-flex flex-column flex-md-row gap-md-4">
+					<div class="col-sm">
 						<div class="">
-							<h1>In this chapter:</h1>
+							<h1>In this chapter</h1>
 							<p>{{ .Params.inthischapter }}</p>
 						</div>
-						<div class="">
-							<strong>Related reading:</strong>
+						<div class="d-flex flex-column">
+							<strong>Related reading</strong>
 							{{ range .Params.relatedreading }}
-								<li>{{ . | markdownify}}</li>
+								{{ . | markdownify}}
 							{{ end }}
 						</div>
 					</div>
-					<div class="">
+					<div class="col-sm">
 						<div class="">
-							<h1>What you need:</h1>
-							<ul>
+							<h1>What you need</h1>
+							<ul class="custom-list">
 								{{ range .Params.whatyouneed }}
 								<li>{{ . | markdownify}}</li>
 								{{ end }}
