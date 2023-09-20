@@ -30,6 +30,29 @@ body {
   min-height: 100vh;
 }
 
+.docs-content h1 {
+  // font-size: calc(1.34375rem + 1.125vw);
+  // font-size: calc(1rem + 1.125vw);
+  // margin-top: 2rem;
+}
+.docs-content h2 {
+  // font-size: calc(1.34375rem + 1.125vw);
+  // font-size: calc(0.8rem + 1.125vw);
+  margin-top: 4rem;
+}
+.docs-content h3 {
+  // font-size: calc(1.34375rem + 1.125vw);
+}
+.docs-content ol {
+  font-size: $font-size-lg;
+  list-style-position: outside;
+  padding-left: 1.35rem;
+}
+
+.docs-content ol li p:first-child {
+  // display: inline-block;
+  // font-size: $font-size-md;
+}
 .docs-content {
   padding-left: 72px;
   padding-right: 72px;

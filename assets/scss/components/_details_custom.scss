@@ -34,8 +34,15 @@ details {
   border-radius: 0.25rem;
   padding: 0.5rem 2rem 0;
   margin: 0.5rem 0;
-  background: $concept;
+  background: inherit;
   border-radius: 17.5px;
+}
+details.concept {
+  background: $concept;
+}
+details.detailed {
+  border: 1px solid black;
+  // margin-top: 2rem;
 }
 
 /*
