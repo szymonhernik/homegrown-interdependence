@@ -22,24 +22,27 @@ whatyouneed: [
 
 ---
 
-# Before starting: SLIPPERY PUDDLE
+{{< slipperypuddle >}}
 
-<aside>
-⚠️ We will delete **EVERYTHING** from your laptop. If you have anything important, back them up somewhere else!!
+We will delete EVERYTHING from your laptop. If you have anything important, back them up somewhere else!!
 
-</aside>
+{{< /slipperypuddle >}}
 
-# Concept: Understanding BIOS
+{{< concept "<span class=\"fw-bold fs-5\"> Concept: Understanding BIOS</span>" >}}
 
-_OMG, what is BIOS???_
+<p>OMG, what is BIOS???</p>
+<p>Before installing Linux Lite, you need to know that we will go into your laptop’s BIOS. This is because we want to boot your computer from the USB stick, instead of your Windows OS.</p>
+<p>Don’t worry, we got you.</p>
 
-Before installing Linux Lite, you need to know that we will go into your laptop’s BIOS. This is because we want to boot your computer from the USB stick, instead of your Windows OS.
+<strong>BIOS looks like this:</strong>
 
-Don’t worry, we got you.
+<div class="standout-definition">BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.</div>
 
-### BIOS looks like this:
+{{< /concept >}}
 
-[https://en.wikipedia.org/wiki/BIOS#/media/File:Award_BIOS_setup_utility.png](https://en.wikipedia.org/wiki/BIOS#/media/File:Award_BIOS_setup_utility.png)
+![Green Sea Turtle Hatchliby Hannah Le Leu](bios.png "A green sea turtle hatchling cautiously surfaces for air, to a sky full of hungry birds.")
+
+<!-- ![Happy Dance by Neil Sanders](https://i.giphy.com/media/hIip12KtxrNU5GG0Ii/giphy.gif?cid=790b7611e72a6d08626c8c4ff1410056fbc51e0ed1f2daab&rid=giphy.gif&ct=s) -->
 
 > BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.
 
