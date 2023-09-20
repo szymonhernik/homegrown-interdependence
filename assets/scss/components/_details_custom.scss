@@ -1,3 +1,33 @@
+// Custom
+// Custom
+// Custom
+
+.standout-definition {
+  margin: 2rem -2rem;
+  padding: 1rem 4rem;
+  background: #f1f5e6;
+  position: relative;
+  background: linear-gradient(to bottom, #f1f5e6 22px, $gray-300 1px);
+  background-size: 100% 23px;
+  background-position: top 14px right 0px;
+  overflow: hidden;
+}
+
+.standout-definition:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 60px;
+  height: 100%;
+  width: 1px;
+  background: #bababa;
+}
+// End of custom
+// End of custom
+// End of custom
+
 details {
   display: block;
   border: 1px solid $gray-200;

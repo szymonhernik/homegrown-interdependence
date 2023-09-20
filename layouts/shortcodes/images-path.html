@@ -1,0 +1,8 @@
+{{ $path := .Get 0 }} {{ $img := .Page.Resources.GetMatch $path }} {{ with $img
+}}
+<img
+  src="{{ .Permalink }}"
+  alt="{{ with .Title }}{{ . }}{{ else }}{{ $path }}{{ end }}"
+/>
+
+{{ end }}

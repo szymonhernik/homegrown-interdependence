@@ -9,6 +9,18 @@ images: []
 
 weight: 140
 toc: true
+
+difficulty: "Easy"
+time: "3-5 hrs"
+inthischapter: "We will install Linux Lite on your secondhand (Windows) laptop."
+relatedreading: [
+
+" [2-1. What is Operating System and why do I need Linux?]({{< relref \"1-1\" >}}) ",
+]
+whatyouneed: [
+  "bootable USB stick",
+    "[SB with Linux Lite](#link-linux-lite)",
+]
 ---
 
 # 2-3. Setting up Linux

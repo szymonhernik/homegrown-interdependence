@@ -1,12 +1,12 @@
 ---
-title: "Setting up Linux"
+title: "Setting up Linuxdd"
 description: "TestingPageTestingPage."
 lead: "Answers to frequently asked questions."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
 images: []
-weight: 130
+weight: 128
 toc: true
 difficulty: "Easy"
 time: "3-5 hrs"
@@ -28,25 +28,29 @@ We will delete EVERYTHING from your laptop. If you have anything important, back
 
 {{< /slipperypuddle >}}
 
-{{< concept "<span class=\"fw-bold fs-5\"> Concept: Understanding BIOS</span>" >}}
+{{< concept  "<span class=\"fw-bold fs-5\"> Concept: Understanding BIOS</span>" >}}
 
-<p>OMG, what is BIOS???</p>
-<p>Before installing Linux Lite, you need to know that we will go into your laptop’s BIOS. This is because we want to boot your computer from the USB stick, instead of your Windows OS.</p>
-<p>Don’t worry, we got you.</p>
+**OMG, what is BIOS???**
 
-<strong>BIOS looks like this:</strong>
+Before installing Linux Lite, you need to know that we will go into your laptop’s BIOS. This is because we want to boot your computer from the USB stick, instead of your Windows OS.
 
-<div class="standout-definition">BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.</div>
+Don’t worry, we got you.
+
+<!-- ![Green Sea Turtle Hatchliby Hannah Le Leu](bios.png "A green sea turtle hatchling cautiously surfaces for air, to a sky full of hungry birds.") -->
+
+<!-- {{< images-path "bios.png" >}} -->
+
+<img src="images/bios.png" class="lazyloaded blur-up img-fluid ls-is-cached">
+
+<!-- <div class="standout-definition">BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.</div> -->
+
+{{< standout-definition >}}
+
+BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.
+
+{{< /standout-definition >}}
 
 {{< /concept >}}
-
-![Green Sea Turtle Hatchliby Hannah Le Leu](bios.png "A green sea turtle hatchling cautiously surfaces for air, to a sky full of hungry birds.")
-
-<!-- ![Happy Dance by Neil Sanders](https://i.giphy.com/media/hIip12KtxrNU5GG0Ii/giphy.gif?cid=790b7611e72a6d08626c8c4ff1410056fbc51e0ed1f2daab&rid=giphy.gif&ct=s) -->
-
-> BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.
-
----
 
 # How to access the BIOS screen
 

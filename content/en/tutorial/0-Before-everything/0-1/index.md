@@ -11,7 +11,7 @@ toc: true
 time: "long"
 ---
 
-## How to access the BIOS screen
+---
 
 1. **Turn on** the laptop (if it’s already on, **Restart**)
 2. **Quickly tab** the hotkey (see below) on your keyboard **_before_** it boots up completely
