@@ -7,5 +7,4 @@
 ## Doks theme credits
 
 - [Doks is a Hyas theme build by the creator of Hyas.](https://gethyas.com/themes/)
-
-– [Quick start (repo)](https://getdoks.org/docs/overview/quick-start/)
+- [Quick start (repo)](https://getdoks.org/docs/overview/quick-start/)
