@@ -125,7 +125,8 @@ button#doks-versions {
 
 .offcanvas .nav-link:hover,
 .offcanvas .nav-link:focus {
-  color: $link-color;
+  // color: $link-color;
+  color: $navbar-active;
 }
 
 .offcanvas .nav-link.active {
@@ -604,7 +605,9 @@ button#doks-versions {
 }
 
 .offcanvas .nav-link {
-  color: $body-color;
+  // color: $body-color;
+  // color: $body-color;
+  color: $navbar-default;
 }
 
 .doks-subnavbar {
@@ -622,7 +625,8 @@ button#doks-versions {
 
 .offcanvas .nav-link:hover,
 .offcanvas .nav-link:focus {
-  color: $link-color;
+  // color: $link-color;
+  color: $navbar-active;
 }
 
 .offcanvas .nav-link.active {
