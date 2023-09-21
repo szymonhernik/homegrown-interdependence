@@ -151,6 +151,12 @@ footer .list-flex {
   display: flex;
 }
 
+@include media-breakpoint-up(xxl) {
+  footer .logo {
+    margin-left: 24px;
+  }
+}
+
 // Tutorial Sidebar styling
 
 .collapse.show,
