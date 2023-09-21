@@ -21,6 +21,29 @@ body {
   font-family: $body-font-family;
 }
 
+// Custom ABOUT styles
+// Custom ABOUT styles
+// Custom ABOUT styles
+
+.font-italic {
+  font-style: italic;
+}
+.docs-about h2 {
+  margin-top: 14vh;
+}
+.docs-about {
+  margin-bottom: 20vh;
+}
+.docs-about p {
+  font-size: $font-size-lg;
+}
+.docs-about .credits {
+  margin-top: 14vh;
+}
+.docs-about .credits p {
+  font-size: $font-size-md;
+}
+
 //  Custom CONTENT styles
 //  Custom CONTENT styles
 //  Custom CONTENT styles

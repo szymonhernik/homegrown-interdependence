@@ -59,11 +59,7 @@
   identifier = "news"
   weight = 30
 
-[[main]]
-  name = "Roadmap"
-  weight = 40
-  identifier = "roadmap"
-  url = "/roadmap/"
+
 
 [[main]]
   name = "Dictionary"
