@@ -11,11 +11,9 @@ contributors: []
 
 # Team RGBdog (Our Team)
 
-Created: May 30, 2023 1:42 PM
-
 (entire team picture)
 
-# RGBdog
+## RGBdog
 
 We are RGBdog, a community-driven creative studio researching ethical, humane, and bonding technology, that aims to facilitate care in a digital society.
 
@@ -27,31 +25,34 @@ We fluidly gather creatives sharing a similar agenda. If you want to get in touc
 
 💌 woof@rgbdog.studio
 
-# The RGBdogs
-
-### \* Individual pictures
+## The RGBdogs
 
 ### Soyun
 
-- Direction, design, editing
-- Soyun Park is an artist, designer, educator, and director at RGBdog. She’s from South Korea and is based in The Netherlands since 2017. She loves dogs and doing Wing Chun kung-fu. She’s a big fan of the book ‘Ways of Being’ by James Bridle.
-- [website](http://www.soyunparrrk.com) | [social](http://www.instagram.com/soyunparrrk)
+Direction, design, editing
+
+Soyun Park is an artist, designer, educator, and director at RGBdog. She’s from South Korea and is based in The Netherlands since 2017. She loves dogs and doing Wing Chun kung-fu. She’s a big fan of the book ‘Ways of Being’ by James Bridle.
+
+[website](http://www.soyunparrrk.com) | [social](http://www.instagram.com/soyunparrrk)
 
 ### Szy
 
-- Design, development
-- Szy Hernik is …
+Design, development
+
+Szy Hernik is …
 
 ### Leo
 
-- ?
-- Leo Scarin is a creative technologist and educator ….
+?
+
+Leo Scarin is a creative technologist and educator ….
 
 ### Jin
 
-- UI & UX research ….
-- Jin Chung is …
+UI & UX research ….
+
+Jin Chung is …
 
 ### Danny Tirthdas van der Kleij
 
-- External advisor
+External advisor
