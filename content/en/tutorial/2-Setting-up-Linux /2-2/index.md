@@ -1,15 +1,13 @@
 ---
-title: "Linux?"
+title: "Making a bootable Linux USB stick"
 description: "TestingPageTestingPage."
 lead: "Answers to frequently asked questions."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
 images: []
-
-weight: 140
+weight: 220
 toc: true
-
 difficulty: "Easy"
 time: "3-5 hrs"
 inthischapter: "We will install Linux Lite on your secondhand (Windows) laptop."
@@ -21,23 +19,9 @@ whatyouneed: [
   "bootable USB stick",
     "[SB with Linux Lite](#link-linux-lite)",
 ]
+
 ---
 
-# 2-3. Setting up Linux
+Now you have Linux on your laptop!!!!
 
-## What you need:
-
-- Your secondhand laptop
-- [A bootable USB with Linux Lite](https://www.notion.so/2-2-Making-a-bootable-Linux-USB-stick-8a3854e2e9494fd09cd59161b6fd7792?pvs=21)
-
-## Difficulty:
-
-Easy
-
-## Difficulty:
-
-Easy
-
-## Difficulty:
-
-Easy
+It wasn’t bad, right?

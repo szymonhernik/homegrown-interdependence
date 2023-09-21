@@ -110,6 +110,11 @@ footer .list-flex {
 
 // Tutorial Sidebar styling
 
+.collapse.show,
+.collapsing {
+  padding-right: 2rem;
+}
+
 .collapsible-sidebar {
   margin: 2.125rem 0 14rem 0;
 }

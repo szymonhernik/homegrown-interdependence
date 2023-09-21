@@ -17,6 +17,7 @@
     <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
       <div class="content">
         {{ block "main" . }}  {{ end }} 
+
       </div>
     </div>
     {{ block "sidebar-prefooter" . }}{{ end }}

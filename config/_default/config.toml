@@ -85,3 +85,4 @@ rel  = "sitemap"
 
 [sectionTemplates]
   dictionary = "layouts/dictionary/single.html"
+  about = "layouts/about/single.html"
