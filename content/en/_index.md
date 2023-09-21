@@ -47,7 +47,7 @@ You normally pay monthly to use their homes like this.
 
 Tech companies are pushing the idea of ‘unlimited cloud’. So you pay them monthly, and we make more and more files every day.
 
-![**(IMAGE, all the belongings being sent to the server farm)** ](Untitled-5.png)
+![(IMAGE, all the belongings being sent to the server farm)](Untitled-5.png)
 
 But actually, the ‘unlimited cloud’ doesn’t exist! They are all physical machines running 24/7, costing a lot of energy and water, and heavily harming our planet. (**ADD SOURCE**) At some point, it will be all out of our hands! How can we call this ‘unlimited’ ?!
 
