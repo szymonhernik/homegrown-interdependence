@@ -38,13 +38,7 @@ Before installing Linux Lite, you need to know that we will go into your laptop�
 
 Don’t worry, we got you.
 
-<!-- ![Green Sea Turtle Hatchliby Hannah Le Leu](bios.png "A green sea turtle hatchling cautiously surfaces for air, to a sky full of hungry birds.") -->
-
-<!-- {{< images-path "bios.png" >}} -->
-
 <img src="images/bios.png" class="lazyloaded blur-up img-fluid ls-is-cached">
-
-<!-- <div class="standout-definition">BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the basic settings you see on your computer. We need to change some of the settings there.</div> -->
 
 {{< standout-definition >}}
 
@@ -53,8 +47,6 @@ BIOS stands for ‘Basic Input/Output System’. It’s like the basic of the ba
 {{< /standout-definition >}}
 
 {{< /concept >}}
-
-<!-- ![Green Sea Turtle Hatchliby Hannah Le Leu](images/bios.png "A green sea turtle hatchling cautiously surfaces for air, to a sky full of hungry birds.") -->
 
 ## How to access the BIOS screen
 
@@ -123,10 +115,12 @@ We made these steps very simple for you. For extensive information, you can also
    5. **Save** settings & **Restart**
       {{< /alert >}}
 
-7. <span class="lg-font">**Select** ‘Direct install Linux Lite’ and **Enter**</span>
+{{< tutorial-step-fold "7. **Select** ‘Direct install Linux Lite’ and **Enter**" "folded">}}
 
-   (The second option from this image)
-   Your laptop will reboot.
+<img src="images/boot-linux.png" class="lazyloaded blur-up img-fluid ls-is-cached">
+(The second option from this image)
+Your laptop will reboot.
+{{< /tutorial-step-fold >}}
 
 8. <span class="lg-font">**Select** your language, and keyboard, and **Continue**</span>
 

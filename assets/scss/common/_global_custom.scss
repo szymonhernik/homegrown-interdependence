@@ -74,6 +74,10 @@ body.docs {
   font-size: calc(1.875rem + 1.5vw);
 }
 
+body a {
+  color: black;
+}
+
 a:hover,
 a:focus {
   text-decoration: underline;
