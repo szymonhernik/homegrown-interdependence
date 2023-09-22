@@ -1,28 +1,57 @@
 .alert {
   font-family: $font-family-sans-serif;
   font-size: $font-size-md;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .alert-icon {
   margin-right: 0.75rem;
 }
 
-.tutorial main .alert {
+.tutorial main .alert:not(.alert-slippery-puddle) {
   // margin: 2rem -72px;
-  margin: 2rem -1.5rem;
+  // margin: 2rem -1.5rem;
 }
 .alert {
   // padding: 1rem 72px;
 }
 
+// Styles for alert context info
+// Styles for alert context info
+// Styles for alert context info
+
+.alert-info p {
+  margin-bottom: 0.5rem;
+}
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4 {
+  font-family: $font-family-sans-serif;
+  margin: 1rem 0;
+}
+.alert h4 {
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+// End of styles for alert context info
+// End of styles for alert context info
+// End of styles for alert context info
+
+// Styles for Slippery Puddle
+// Styles for Slippery Puddle
 // Styles for Slippery Puddle
 .alert-slippery-puddle {
   // font-family: $font-family-sans-serif;
   background: $slipperypuddle;
-  padding: 1rem 72px !important;
-  margin: 2rem -72px !important;
+  padding: 1rem 72px;
+  margin: 2rem -72px;
 }
 
+// End of styles for Slippery Puddle
+// End of styles for Slippery Puddle
 // End of styles for Slippery Puddle
 
 @include media-breakpoint-down(xl) {

@@ -1,6 +1,9 @@
 /** Import Bootstrap functions */
 @import "bootstrap/scss/functions";
 
+/** Import html-hint for building tooltips **/
+@import "html-hint/dist/html-hint";
+
 /** Import theme variables */
 @import "common/variables_custom";
 
@@ -28,6 +31,7 @@
 @import "components/mermaid";
 @import "components/search";
 @import "components/tables";
+@import "components/tooltip_custom";
 
 // changed to footers from footer
 @import "layouts/footers";
