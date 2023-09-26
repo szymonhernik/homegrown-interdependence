@@ -1,4 +1,18 @@
 {{ define "main" }}
+<nav
+  {{
+  if
+  eq
+  .Site.Params.menu.section.collapsibleSidebar
+  false
+  }}id="sidebar-default"
+  {{
+  end
+  }}class="docs-links"
+  aria-label="Main navigation"
+>
+  {{ partial "sidebar/docs-menu.html" . }}
+</nav>
 <div class="px-5">
   <div class="row justify-content-center">
     <div class="col-md-12 col-lg-9">

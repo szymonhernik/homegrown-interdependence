@@ -40,4 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // Details code
+  // Details code
+  // Details code
+
+  const afterElement = document.querySelector("#closing-folded-step");
+
+  afterElement.addEventListener("click", () => {
+    const summaryElement = document.querySelector("details.folding summary");
+    summaryElement.click();
+  });
 });

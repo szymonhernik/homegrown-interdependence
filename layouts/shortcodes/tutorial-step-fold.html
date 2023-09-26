@@ -1,4 +1,8 @@
 <details{{ with .Get 1 }} class="{{ . }}"{{ end -}}>
-  <summary>{{ with .Get 0 -}}{{ . | markdownify }}{{ else -}}{{ errorf "No summary provided"}}{{ end -}}</summary>
+  <summary>
+    {{ with .Get 0 -}}{{ . | markdownify }}{{ else -}}{{ errorf "No summary provided"}}{{ end -}}
+    <!-- <p class="d-block"><span>+</span>Show detailed instruction </p> -->
+  </summary>
   {{ with .Inner -}}{{ . | markdownify}}{{ else -}}{{ errorf "No details provided"}}{{ end -}}
+  <p id="closing-folded-step" class="close-folded-step">— close</p>
 </details>

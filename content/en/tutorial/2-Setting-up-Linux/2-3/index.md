@@ -115,10 +115,12 @@ We made these steps very simple for you. For extensive information, you can also
    5. **Save** settings & **Restart**
       {{< /alert >}}
 
-{{< tutorial-step-fold "7. **Select** ‘Direct install Linux Lite’ and **Enter**" "folded">}}
+{{< tutorial-step-fold "7. **Select** ‘Direct install Linux Lite’ and **Enter**" "folding" >}}
 
 <img src="images/boot-linux.png" class="lazyloaded blur-up img-fluid ls-is-cached">
+
 (The second option from this image)
+
 Your laptop will reboot.
 {{< /tutorial-step-fold >}}
 

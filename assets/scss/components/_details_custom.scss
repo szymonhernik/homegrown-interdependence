@@ -37,6 +37,10 @@ details {
   background: inherit;
   border-radius: 17.5px;
 }
+details[open] {
+  padding: 0.5rem 2rem 2rem;
+}
+
 details.concept {
   background: $concept;
 }
@@ -90,23 +94,14 @@ details summary > * {
 }
 */
 
-details[open] {
-  padding: 0.5rem 2rem;
-}
-
-details[open] > summary {
-  border-bottom: 1px solid $gray-300;
-  margin-bottom: 0.5rem;
-}
-
 details h2,
 details h3,
 details h4 {
   margin: 1rem 0 0.5rem;
 }
 
-details p:last-child {
-  margin-bottom: 2rem;
+details.concept[open] p:last-child {
+  // margin-bottom: 2rem;
 }
 
 details ul,
@@ -118,8 +113,43 @@ details pre {
   margin: 0 0 1rem;
 }
 
-details.folded {
+// Foldiing details
+// Foldiing details
+// Foldiing details
+
+details.folding {
   padding: 0.5rem 1rem 0;
   margin: 1rem -1rem;
-  border: 1px dotted grey;
+  border: 1px dashed #d4d4d4;
+  border-radius: 0;
 }
+
+details.folding summary:after {
+  content: "+ Show detailed instruction";
+  position: relative;
+  font-size: $font-size-sm;
+  bottom: -10px;
+}
+
+details.folding summary {
+  font-size: $font-size-lg;
+}
+details.folding[open] > summary::after {
+  transform: rotate(0) translateY(0);
+}
+details.folding[open] summary:after {
+  content: none;
+  // position: relative;
+  // font-size: $font-size-sm;
+}
+details.folding .close-folded-step {
+  // content: "— Close";
+  // position: relative;
+  // display: block;
+  font-size: $font-size-sm;
+  cursor: pointer;
+}
+
+// End of folding details
+// End of folding details
+// End of folding details
