@@ -1,5 +1,7 @@
 ---
-title: Term 2
+title: Linux
+letter: L
+category: linux
 description: Definition 2
 
 draft: false

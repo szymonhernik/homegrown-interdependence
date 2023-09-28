@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="dictionary">
+  <div class="filters">
+    <p><span class="font-italic">All</span></p>
+    <p>Hardware</p>
+    <p>Formatting Windows</p>
+    <p>Linux</p>
+    <p>SSH</p>
+    <p>NextCloud</p>
+    <p>Encryption</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-14 col-lg-10 mt-5 docs-conten docs-about">
+      <div class="">
+        <h1 class="">Dictionary</h1>
+        <p>Here you can see the glossary from the instructions</p>
+        {{ with .Content -}}
+        <div class="">{{ . }}</div>
+        {{ end -}}
+      </div>
+
+      {{ $paginator := .Paginate (.Data.Pages) -}} {{ range $paginator.Pages -}}
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <article>
+              <h2 class="h3">{{ .Params.title }}</h2>
+              <p>{{ .Content }}</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      {{ end -}}
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -64,6 +64,7 @@ rel  = "sitemap"
 [permalinks]
   blog = "/blog/:title/"
   docs = "/tutorials/:sections[1:]/:title/"
+  dictionary = "/dictionary/"
 # docs = "/docs/1.0/:sections[1:]/:title/"
 
 [minify.tdewolff.html]
@@ -84,5 +85,5 @@ rel  = "sitemap"
     weight = 10
 
 [sectionTemplates]
-  dictionary = "layouts/dictionary/single.html"
+ # dictionary = "layouts/dictionary/single.html"
   about = "layouts/about/single.html"

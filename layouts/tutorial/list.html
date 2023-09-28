@@ -1,26 +1,107 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1 class="text-center">
-        {{ if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{
-        else }}{{ .Title }}{{ end }}
-      </h1>
-      <div class="text-center">{{ .Content }}</div>
-      <div class="card-list">
-        {{ $currentSection := .CurrentSection }} {{ range where
-        .Site.RegularPages.ByTitle "Section" .Section }} {{ if in (.RelPermalink
-        | string) $currentSection.RelPermalink }}
-        <div class="card my-3">
-          <div class="card-body">
-            <a class="stretched-link" href="{{ .RelPermalink }}"
-              >{{ .Params.title | title }} &rarr;</a
-            >
-          </div>
-        </div>
-        {{ end }} {{ end }}
-      </div>
-    </article>
-  </div>
-</div>
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-4 col-xl-4 docs-sidebar{{ if ne .Site.Params.options.navbarSticky true }} docs-sidebar-top{{ end }} d-none d-lg-block">
+			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
+				{{ partial "sidebar/docs-menu.html" . }}
+			</nav>
+		</div>
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-lg-block col-lg-3" aria-label="Secondary navigation">
+			{{ partial "sidebar/docs-toc.html" . }}
+		</nav>
+		{{ end -}}
+		{{ if .Params.toc -}}
+		<main class="docs-content  col-lg{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
+			{{ if .Site.Params.options.breadCrumb -}}
+				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						{{ partial "main/breadcrumb" . -}}
+						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+					</ol>
+				</nav>
+			{{ end }}
+			{{ partial "extra/slug-progress"}}
+			<h1>{{ .Title }}</h1>
+			<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
+			<!-- {{ if ne .Params.toc false -}}
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				{{ partial "sidebar/docs-toc.html" . }}
+			</nav>
+			{{ end -}} -->
+
+			<!-- Section at the bottom of each tutorial with: difficulty, what you need, time, related reading -->
+			
+			{{ with or .Params.difficulty .Params.time .Params.inthischapter .Params.relatedreading }}
+				<section class="tutorial-info my-5">
+					<div class="d-inline-flex flex-row bg-light p-4 w-auto ">
+						
+							<div class="difficulty ">
+								<strong>Difficulty</strong>
+								<span>{{ $.Params.difficulty }}</span>
+							</div>
+						
+						<div class="time ">
+							<strong>Time:</strong>
+							<span>{{ $.Params.time }}</span>
+						</div>
+
+					</div>
+					<div class="d-flex flex-column flex-md-row gap-md-4">
+						<div class="col-sm">
+							<div class="">
+								<h1>In this chapter</h1>
+								<p>{{ $.Params.inthischapter }}</p>
+							</div>
+							{{ with $.Params.relatedreading}}
+								<div class="d-flex flex-column">
+									<strong>Related reading</strong>
+									{{ range . }}
+										{{ . | markdownify}}
+									{{ end }}
+								</div>
+							{{end}}
+						</div>
+						<div class="col-sm">
+							{{ with $.Params.whatyouneed }}
+							<div class="">
+								<h1>What you need</h1>
+								<ul class="custom-list">
+									{{ range . }}
+									<li>{{ . | markdownify}}</li>
+									{{ end }}
+								</ul> 
+							</div>
+							{{end}}
+						</div>
+					</div>
+						
+
+				</section>
+				{{ end }}
+			
+			<!-- end of section -->
+			{{ .Content }}
+			
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				{{ if .Site.Params.lastMod -}}
+					{{ partial "main/last-modified.html" . }}
+				{{ end -}}
+				{{ if .Site.Params.editPage -}}
+					{{ partial "main/edit-page.html" . }}
+				{{ end -}}
+			</div>
+			<!-- {{ partial "main/docs-navigation.html" . }} -->
+			
+			{{ if not .Site.Params.options.collapsibleSidebar -}}
+				{{ partial "main/docs-navigation.html" . }}
+			{{ else -}}
+				<div class="my-n3"></div>
+			{{ end -}}
+			
+		</main>
+	</div>
 {{ end }}
