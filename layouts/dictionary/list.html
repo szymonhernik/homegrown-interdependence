@@ -40,17 +40,19 @@
     {{ $sortedPages := sort .Data.Pages "Params.title" "asc" }}
     {{ $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" }}
     {{ range $alphabet }}
-      {{ $currentLetter := . }}
-      {{ $pagesForLetter := slice }}
-      {{ range $sortedPages }}
-        {{ if eq (substr .Params.title 0 1 | upper) $currentLetter }}
-          {{ $pagesForLetter = $pagesForLetter | append . }}
-        {{ end }}
-      {{ end }}
-      {{ if gt (len $pagesForLetter) 0 }}
-        <h1>{{ $currentLetter }}</h1>
-        {{ range $pagesForLetter }}
-          <div class="col">
+  {{ $currentLetter := . }}
+  {{ $pagesForLetter := slice }}
+  {{ range $sortedPages }}
+    {{ if eq (substr .Params.title 0 1 | upper) $currentLetter }}
+      {{ $pagesForLetter = $pagesForLetter | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if gt (len $pagesForLetter) 0 }}
+
+    <div class="alphabet-section" id="section-{{ $currentLetter | lower }}">
+      <h1>{{ $currentLetter }}</h1>
+      {{ range $pagesForLetter }}
+        <div class="col term {{ .Params.category | urlize }}">
             <div class="card">
               <div class="card-body">
                 <article>
@@ -60,21 +62,17 @@
                 </article>
               </div>
             </div>
-          </div>
+        </div>
         {{ end }}
+        </div>
       {{ end }}
     {{ end }}
-    
-
-			
 
 
 			
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
+
+
+			
 			
 		</main>
 	</div>

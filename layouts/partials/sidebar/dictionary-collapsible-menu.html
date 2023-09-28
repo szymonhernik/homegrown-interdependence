@@ -2,7 +2,7 @@
 <!-- prettier-ignore -->
 <ul class="list-unstyled collapsible-sidebar">
     <!-- Static filter buttons -->
-    <li><button class="filter-button" data-filter="all">All</button></li>
+    <li><button class="filter-button" data-filter="all" >All</button></li>
   
     <!-- Dynamic filter buttons -->
     {{ $allCategories := slice }}
@@ -14,7 +14,7 @@
         {{ end }}
     {{ end }}
     {{ range sort $allCategories }}
-        <li><button class="filter-button" data-filter="{{ . | urlize }}">{{ . }}</button></li>
+        <li><button class="filter-button" data-filter="{{ . | urlize }}" >{{ . }}</button></li>
     {{ end }}
   
 </ul>

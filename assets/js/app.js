@@ -52,3 +52,37 @@ document.addEventListener("DOMContentLoaded", function () {
     summaryElement.click();
   });
 });
+
+function filterTerms(category) {
+  var terms = document.querySelectorAll(".term");
+  var sections = document.querySelectorAll(".alphabet-section");
+
+  terms.forEach(function (term) {
+    if (category === "all" || term.classList.contains(category)) {
+      term.style.display = "block";
+    } else {
+      term.style.display = "none";
+    }
+  });
+
+  sections.forEach(function (section) {
+    var visibleTerms = section.querySelectorAll(
+      ".term:not([style='display: none;'])"
+    );
+    if (visibleTerms.length > 0) {
+      section.style.display = "block";
+    } else {
+      section.style.display = "none";
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var buttons = document.querySelectorAll(".filter-button");
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var category = button.getAttribute("data-filter");
+      filterTerms(category);
+    });
+  });
+});
