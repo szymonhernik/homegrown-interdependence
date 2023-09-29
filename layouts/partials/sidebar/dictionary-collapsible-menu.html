@@ -3,13 +3,18 @@
 <h1 class="project-name">
     Building your <span style="white-space: nowrap">Home Server</span>
   </h1>
+
+<h3 class="project-name">Filter by</h3>
 <ul class="list-unstyled collapsible-sidebar filters-sidebar">
   <!-- Static filter buttons -->
-  <li><button class="filter-button" data-filter="all">All</button></li>
+  <li><button class="filter-button active" data-filter="all">All</button></li>
 
   <!-- Dynamic filter buttons -->
-  {{ $allCategories := slice }} {{ range .Site.Pages }} {{ with .Params.category
-  }} {{ if not (in $allCategories .) }} {{ $allCategories = $allCategories |
+  <!-- prettier-ignore -->
+  {{ $allCategories := slice }} 
+  {{ range .Site.Pages }} 
+  {{ with .Params.category
+  }}  {{ if not (in $allCategories .) }} {{ $allCategories = $allCategories |
   append . }} {{ end }} {{ end }} {{ end }} {{ range sort $allCategories }}
   <li>
     <button class="filter-button" data-filter="{{ . | urlize }}">

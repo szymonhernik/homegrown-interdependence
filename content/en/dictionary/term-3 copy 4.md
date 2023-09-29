@@ -1,6 +1,6 @@
 ---
-title: amen
-category: Formatting Windows
+title: encrypting
+category: Encryption
 description: Definition 1
 icon: 🍄
 draft: false
@@ -8,4 +8,4 @@ images: []
 contributors: ["John Doe", "Jane Smith"]
 ---
 
-Content for Term 4 goes here.
+Example term for an encryption.

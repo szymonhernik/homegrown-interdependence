@@ -57,6 +57,10 @@ function initFilterButtons() {
   // Check if any filter button elements are present on the page
   if (!document.querySelector(".filter-button")) return;
 
+  // const sectionNameElement = document.querySelector(".navbar-text");
+  // if (sectionNameElement) {
+  //   sectionNameElement.textContent = "Dictionary (all)";
+  // }
   console.log("init");
   const buttons = document.querySelectorAll(".filter-button");
   buttons.forEach((button) => {
@@ -76,6 +80,14 @@ function handleFilterButtonClick(e) {
     button.classList.add("active");
     const category = button.getAttribute("data-filter");
     filterTerms(category);
+
+    // Update the section name display
+    const sectionNameElement = document.querySelector(".navbar-text");
+    if (category === "all") {
+      sectionNameElement.textContent = "Dictionary (all)";
+    } else {
+      sectionNameElement.textContent = "Dictionary (" + category + ")";
+    }
   }
 }
 

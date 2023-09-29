@@ -1,6 +1,6 @@
 ---
-title: amen
-category: Formatting Windows
+title: nextclouding
+category: NextCloud
 description: Definition 1
 icon: 🍄
 draft: false

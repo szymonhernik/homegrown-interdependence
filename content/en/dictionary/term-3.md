@@ -1,8 +1,8 @@
 ---
 title: axioms
-category: hardware
+category: Hardware
 description: Definition 1
-
+icon: 🍄
 draft: false
 images: []
 contributors: ["John Doe", "Jane Smith"]

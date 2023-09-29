@@ -1,6 +1,6 @@
 ---
-title: amen
-category: Formatting Windows
+title: axioms
+category: SSH
 description: Definition 1
 icon: 🍄
 draft: false
@@ -8,4 +8,4 @@ images: []
 contributors: ["John Doe", "Jane Smith"]
 ---
 
-Content for Term 4 goes here.
+Content for Term 3 goes here.

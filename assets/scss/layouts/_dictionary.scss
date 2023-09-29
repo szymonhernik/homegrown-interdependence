@@ -1,0 +1,31 @@
+.dictionary {
+  position: relative;
+}
+.dictionary-contents {
+  margin-top: 10vh;
+}
+
+.terms-text {
+  font-size: $font-size-lg;
+  font-family: $font-family-sans-serif;
+}
+.terms-headline {
+  font-weight: bold;
+}
+.terms-content {
+  //   color: #3f3f3f;
+}
+
+.docs-content .alphabet-section * {
+  margin: 0.5rem 0;
+}
+.docs-content .alphabet-section .term {
+  margin: 2rem 0;
+}
+.docs-content .alphabet-section {
+  margin: 4rem 0;
+}
+.docs-content .alphabet-section .super-letter {
+  //   font-size: $font-size-xl;
+  font-family: $font-family-sans-serif;
+}

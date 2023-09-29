@@ -29,7 +29,7 @@
 		{{ end -}}
 			
 
-    <div class="">
+    <div class="dictionary-contents">
       <h1 class="">Dictionary</h1>
       <p>Here you can see the glossary from the instructions</p>
       {{ with .Content -}}
@@ -50,18 +50,16 @@
   {{ if gt (len $pagesForLetter) 0 }}
 
     <div class="alphabet-section" id="section-{{ $currentLetter | lower }}">
-      <h1>{{ $currentLetter }}</h1>
+      <h2 class="super-letter">{{ $currentLetter }}</h2>
       {{ range $pagesForLetter }}
         <div class="col term {{ .Params.category | urlize }}">
-            <div class="card">
-              <div class="card-body">
+            
                 <article>
-                  <h2 class="h3">{{ .Params.title }}</h2>
-                  <p>{{ .Content }}</p>
+                  <h2 class="terms-text terms-headline">{{ .Params.title }}</h2>
+                  <p class="terms-text terms-content">{{ .Content | markdownify }}</p>
                   <code>{{ .Params.category }}</code>
                 </article>
-              </div>
-            </div>
+              
         </div>
         {{ end }}
         </div>
