@@ -16,22 +16,19 @@ jobs:
         with:
           node-version: "16"
           cache: "npm"
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "0.113.0"
           extended: true
-
+      - name: Check Hugo version
+        run: hugo version
       - name: Install dependencies
         run: npm install
-
       - name: Check for linting errors
         run: ./node_modules/.bin/eslint --fix .
-
       - name: Build production website
         run: npm run build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
