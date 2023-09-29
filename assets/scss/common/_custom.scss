@@ -1,28 +1,199 @@
 /** Custom styles */
 
-// ::-webkit-scrollbar {
-//   width: 0.5rem;
-//   background-color: #f5f5f5;
-// }
-body .navbar {
-  background-color: #fffeda;
+$body-font-family: "Trebuchet MS";
+
+//  Custom Home styles
+//  Custom Home styles
+//  Custom Home styles
+
+.home-page img {
+  mix-blend-mode: darken;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-body .offcanvas {
-  background-color: #fffeda;
+.home-page {
+  margin-bottom: 5rem;
 }
 
-.list-flex {
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  // text-align: center;
+}
+
+//  Custom Typography styles
+//  Custom Typography styles
+//  Custom Typography styles
+
+h1.project-name {
+  font-size: 24px;
+  font-family: $headings-functionality-font-family;
+  font-weight: $headings-functionality-font-weight;
+  // width: 86%;
+}
+
+//  Custom GENERAL styles
+//  Custom GENERAL styles
+//  Custom GENERAL styles
+body {
+  background-color: $body-bg;
+  font-family: $body-font-family;
+}
+
+// Custom ABOUT styles
+// Custom ABOUT styles
+// Custom ABOUT styles
+
+.font-italic {
+  font-style: italic;
+}
+.docs-about h2 {
+  margin-top: 14vh;
+}
+.docs-about {
+  margin-bottom: 20vh;
+}
+.docs-about p {
+  font-size: $font-size-lg;
+}
+.docs-about .credits {
+  margin-top: 14vh;
+}
+.docs-about .credits p {
+  font-size: $font-size-md;
+}
+
+//  Custom CONTENT styles
+//  Custom CONTENT styles
+//  Custom CONTENT styles
+
+.content {
+  background-color: $content-bg;
+  min-height: 100vh;
+}
+
+.docs-content h1 {
+  // font-size: calc(1.34375rem + 1.125vw);
+  // font-size: calc(1rem + 1.125vw);
+  // margin-top: 2rem;
+}
+.docs-content h2 {
+  // font-size: calc(1.34375rem + 1.125vw);
+  // font-size: calc(0.8rem + 1.125vw);
+  margin-top: 4rem;
+}
+.docs-content h3 {
+  // font-size: calc(1.34375rem + 1.125vw);
+}
+.docs-content ol {
+  list-style-position: outside;
+  padding-left: 1.35rem;
+}
+
+.docs-content span.lg-font {
+  font-size: $font-size-lg;
+}
+
+.docs-content ol li p:first-child {
+  // display: inline-block;
+  // font-size: $font-size-md;
+}
+.docs-content {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+//  Custom HEADER styles
+//  Custom HEADER styles
+//  Custom HEADER styles
+.navbar {
+  background-color: $light-yellow;
+  font-size: $font-size-xl;
+}
+body .offcanvas {
+  background-color: $light-yellow;
+}
+
+.navbar .container-fluid {
+  padding-left: 0px !important;
+}
+
+.navbar-brand {
+  display: flex;
+  position: relative;
+  padding-bottom: 0 !important;
+}
+.triangle-container {
+  width: 0;
+  height: 100px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid $content-bg; /* Change the color to suit your needs */
+}
+
+.triangle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px; /* Adjust the size of the SVG icon as needed */
+  height: 60px;
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+}
+
+//  Custom FOOTER styles
+//  Custom FOOTER styles
+//  Custom FOOTER styles
+
+footer .list-flex {
   padding: 0;
   margin: 0;
   display: flex;
 }
 
-.container-fluid {
-  // padding: 0;
+@include media-breakpoint-up(xxl) {
+  footer .logo {
+    margin-left: 24px;
+  }
 }
 
-//  Custom header styles
+// Tutorial Sidebar styling
 
-.navbar-brand img.header-logo {
-  width: 100px;
+.collapse.show,
+.collapsing {
+  padding-right: 2rem;
+}
+
+.collapsible-sidebar {
+  margin: 2.125rem 0 14rem 0;
+}
+
+@media (max-width: 767px) {
+  /* Empty media  for mobile screens */
+
+  .content .row {
+    margin: auto 0;
+  }
+  .docs-content {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Empty media breakpoint for small screens */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Empty media breakpoint for medium screens */
+  .docs-content {
+    padding-left: 42px !important;
+    padding-right: 42px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Empty media breakpoint for large screens */
 }

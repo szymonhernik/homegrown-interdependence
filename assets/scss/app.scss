@@ -1,8 +1,11 @@
 /** Import Bootstrap functions */
 @import "bootstrap/scss/functions";
 
+/** Import html-hint for building tooltips **/
+@import "html-hint/dist/html-hint";
+
 /** Import theme variables */
-@import "common/variables";
+@import "common/variables_custom";
 
 /** Import Bootstrap */
 @import "bootstrap/scss/bootstrap";
@@ -15,12 +18,12 @@
 
 /** Import theme styles */
 @import "common/fonts";
-@import "common/global";
+@import "common/global_custom";
 @import "common/dark";
-@import "components/alerts";
-@import "components/buttons";
+@import "components/alerts_custom";
+@import "components/buttons_custom";
 @import "components/code";
-@import "components/details";
+@import "components/details_custom";
 @import "components/syntax";
 @import "components/comments";
 @import "components/forms";
@@ -28,13 +31,17 @@
 @import "components/mermaid";
 @import "components/search";
 @import "components/tables";
+@import "components/tooltip_custom";
+
 // changed to footers from footer
 @import "layouts/footers";
-
-@import "layouts/header";
+@import "layouts/tutorial_extra";
+@import "layouts/header_custom";
 @import "layouts/pages";
 @import "layouts/posts";
-@import "layouts/sidebar";
+@import "layouts/sidebar_custom";
+@import "layouts/filters";
+@import "layouts/dictionary";
 
 /** Import custom styles */
 @import "common/custom";

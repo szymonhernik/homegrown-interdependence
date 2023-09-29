@@ -1,0 +1,16 @@
+<div class="alert slippery-puddle alert-{{ with .Get "context" }}{{.}}{{ else }}doks{{ end }} " role="alert">
+    <div class="alert-headers d-inline-flex flex-column mb-2 fs-5">
+        Before starting
+        <strong>SLIPPERY PUDDLE</strong>
+    </div>
+    {{ with .Get "text"}}
+      <div class="w-100">{{ . | safeHTML }} </div>
+    {{ else }}
+      {{ with .Inner}}
+        <div class="w-100"> {{ . | markdownify}}</div>
+      {{ else }}
+        {{ errorf "No valid text variable or Inner content given"}}
+      {{ end }}
+    {{ end}}
+  </div>
+  

@@ -1,0 +1,18 @@
+ul.filters-sidebar {
+  margin-top: 0.5rem;
+}
+.filters-sidebar .active {
+  // background: pink;
+  font-weight: bold;
+  color: black;
+}
+
+button.filter-button {
+  padding-left: 0;
+  border: none;
+  background: none;
+  text-transform: capitalize;
+
+  font-size: $font-size-md;
+  color: $body-color-light;
+}

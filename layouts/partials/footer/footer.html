@@ -2,9 +2,9 @@
   <div
     class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}"
   >
-    <div class="row">
-      <div class="col-lg-8 order-last order-lg-first">
-        <ul class="list-flex">
+    <div class="row align-items-center">
+      <div class="col-lg-8 order-first order-lg-first">
+        <ul class="list-flex align-items-center">
           {{ range .Site.Menus.footer -}}
           <li>
             <img class="logo" src="/rgb-logo.png" alt="" />
@@ -13,7 +13,7 @@
           <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
         </ul>
       </div>
-      <div class="col-lg-8 order-first order-lg-last text-lg-end">
+      <div class="col-lg-8 order-last order-lg-last text-lg-end">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
           <li class="list-inline-item">

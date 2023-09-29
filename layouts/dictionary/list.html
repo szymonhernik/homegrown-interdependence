@@ -1,0 +1,77 @@
+{{ define "main" }}
+	<div class="row flex-xl-nowrap page-dictionary">
+		<div class="col-lg-4 col-xl-4 docs-sidebar{{ if ne .Site.Params.options.navbarSticky true }} docs-sidebar-top{{ end }} d-none d-lg-block">
+			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
+
+				{{ partial "sidebar/dictionary-collapsible-menu.html" . }}
+        <!-- <div class="">
+          <p><span class="font-italic">All</span></p>
+          <p>Hardware</p>
+          <p>Formatting Windows</p>
+          <p>Linux</p>
+          <p>SSH</p>
+          <p>NextCloud</p>
+          <p>Encryption</p>
+        </div> -->
+        
+			</nav>
+		</div>
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-lg-block col-lg-3" aria-label="Secondary navigation">
+      <!-- {{ partial "sidebar/docs-toc.html" . }} -->
+
+		</nav>
+		{{ end -}}
+		{{ if .Params.toc -}}
+		<main class="docs-content  col-lg{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
+			
+
+    <div class="dictionary-contents">
+      <h1 class="">Dictionary</h1>
+      <p>Here you can see the glossary from the instructions</p>
+      {{ with .Content -}}
+      <div class="">{{ . }}</div>
+      {{ end -}}
+    </div>
+
+    {{ $sortedPages := sort .Data.Pages "Params.title" "asc" }}
+    {{ $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" }}
+    {{ range $alphabet }}
+  {{ $currentLetter := . }}
+  {{ $pagesForLetter := slice }}
+  {{ range $sortedPages }}
+    {{ if eq (substr .Params.title 0 1 | upper) $currentLetter }}
+      {{ $pagesForLetter = $pagesForLetter | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if gt (len $pagesForLetter) 0 }}
+
+    <div class="alphabet-section" id="section-{{ $currentLetter | lower }}">
+      <h2 class="super-letter">{{ $currentLetter }}</h2>
+      {{ range $pagesForLetter }}
+        <div class="col term {{ .Params.category | urlize }}">
+            
+                <article>
+                  <h2 class="terms-text terms-headline">{{ .Params.title }}</h2>
+                  <p class="terms-text terms-content">{{ .Content | markdownify }}</p>
+                  <code>{{ .Params.category }}</code>
+                </article>
+              
+        </div>
+        {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+
+
+			
+
+
+			
+			
+		</main>
+	</div>
+{{ end }}

@@ -1,0 +1,40 @@
+section.tutorial-info {
+  // background-color: aqua;
+  color: $extra-info-color;
+}
+
+section.tutorial-info h1 {
+  text-transform: uppercase;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-xl;
+  color: $body-color;
+}
+
+section.tutorial-info a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+ul.custom-list {
+  padding-left: 0;
+  list-style: none; /* This removes the default bullet points */
+}
+
+ul.custom-list li::before {
+  content: ""; /* This adds a bullet point before each list item */
+  display: inline-block;
+  width: 10px; /* This changes the size of the bullet points */
+  height: 10px; /* This changes the size of the bullet points */
+  margin-right: 10px; /* This adds some space between the bullet point and the list item text */
+  background-color: green; /* This changes the color of the bullet points to green */
+  border-radius: 50%; /* This makes the bullet points circular */
+}
+
+.difficulty {
+  padding-right: 10px; /* Adjust as needed */
+  border-right: 1px solid #acacac; /* Change color as needed */
+}
+
+.time {
+  padding-left: 10px; /* Adjust as needed */
+}

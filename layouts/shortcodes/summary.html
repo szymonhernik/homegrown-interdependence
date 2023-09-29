@@ -1,0 +1,23 @@
+<!-- layouts/shortcodes/summary.html -->
+<section id="summary">
+  <!-- What you need -->
+  <h3>What you need:</h3>
+
+  <div>{{ .Inner | markdownify }}</div>
+
+  <!-- Difficulty -->
+  <h3>Difficulty:</h3>
+  <p>{{ .Get "difficulty" }}</p>
+
+  <!-- In this chapter -->
+  <h3>In this chapter:</h3>
+  <p>{{ .Get "in_this_chapter" | markdownify }}</p>
+
+  <!-- In this chapter -->
+  <h3>What you need 2:</h3>
+  {{ .Get "what_you_need" | markdownify }}
+
+  <!-- Related reading -->
+  <h3>Related reading:</h3>
+  <p>{{ .Get "related_reading" | markdownify }}</p>
+</section>
