@@ -23,6 +23,12 @@ jobs:
       - name: Check for linting errors
         run: ./node_modules/.bin/eslint --fix .
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
       - name: Build production website
         run: npm run build
 
