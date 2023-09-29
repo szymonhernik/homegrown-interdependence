@@ -40,14 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+});
 
-  // Details code
-  // Details code
-  // Details code
+// Details code
+// Details code
+// Details code
 
-  const afterElement = document.querySelector("#closing-folded-step");
+const afterElements = document.querySelectorAll(".close-folded-step");
 
-  afterElement.addEventListener("click", () => {
+afterElements.forEach((element) => {
+  element.addEventListener("click", () => {
     const summaryElement = document.querySelector("details.folding summary");
     summaryElement.click();
   });
@@ -81,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var buttons = document.querySelectorAll(".filter-button");
   buttons.forEach(function (button) {
     button.addEventListener("click", function () {
+      buttons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+      // Add active class to the clicked button
+      button.classList.add("active");
       var category = button.getAttribute("data-filter");
       filterTerms(category);
     });
