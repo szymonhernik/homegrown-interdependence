@@ -1,20 +1,20 @@
 <!-- Auto collapsible section menu -->
 <!-- prettier-ignore -->
+<h1 class="project-name">
+    Building your <span style="white-space: nowrap">Home Server</span>
+  </h1>
 <ul class="list-unstyled collapsible-sidebar filters-sidebar">
-    <!-- Static filter buttons -->
-    <li><button class="filter-button" data-filter="all" >All</button></li>
-  
-    <!-- Dynamic filter buttons -->
-    {{ $allCategories := slice }}
-    {{ range .Site.Pages }}
-        {{ with .Params.category }}
-            {{ if not (in $allCategories .) }}
-                {{ $allCategories = $allCategories | append . }}
-            {{ end }}
-        {{ end }}
-    {{ end }}
-    {{ range sort $allCategories }}
-        <li><button class="filter-button" data-filter="{{ . | urlize }}" >{{ . }}</button></li>
-    {{ end }}
-  
+  <!-- Static filter buttons -->
+  <li><button class="filter-button" data-filter="all">All</button></li>
+
+  <!-- Dynamic filter buttons -->
+  {{ $allCategories := slice }} {{ range .Site.Pages }} {{ with .Params.category
+  }} {{ if not (in $allCategories .) }} {{ $allCategories = $allCategories |
+  append . }} {{ end }} {{ end }} {{ end }} {{ range sort $allCategories }}
+  <li>
+    <button class="filter-button" data-filter="{{ . | urlize }}">
+      {{ . }}
+    </button>
+  </li>
+  {{ end }}
 </ul>

@@ -20,3 +20,12 @@
 .filters-sidebar .active {
   background: pink;
 }
+
+button.filter-button {
+  border: none;
+  background: none;
+  text-transform: capitalize;
+
+  font-size: $font-size-md;
+  color: $body-color-light;
+}

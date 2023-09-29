@@ -1,95 +1,99 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to handle button click events
-  function handleButtonClick(e, isVisible) {
-    e.preventDefault();
-    const tooltip = e.target
-      .closest(".tooltip-custom")
-      .querySelector(".tooltiptext");
-    const tooltipElement = e.target
-      .closest(".tooltip-custom")
-      .querySelector(".tooltip-element");
+document.addEventListener("DOMContentLoaded", () => {
+  initTooltipButtons();
+  console.log("DOMContentLoaded fired");
+  initFoldedSteps();
+  initFilterButtons();
+});
 
-    tooltip.style.visibility = isVisible ? "visible" : "hidden";
-    tooltipElement.style.background = isVisible ? "$more-bg" : "none";
-  }
+function initTooltipButtons() {
+  // Check if any tooltip elements are present on the page
+  if (!document.querySelector(".tooltip-custom")) return;
 
-  // Get the elements with the class "mobile-only"
   const mobileOnlyElements = document.querySelectorAll(".mobile-only");
-
-  // Check if the display property of the first element is set to "block"
   if (window.getComputedStyle(mobileOnlyElements[0]).display === "block") {
-    // Get the close and open buttons
-    const closeButtons = document.querySelectorAll(
-      ".tooltip-custom .mobile-only"
-    );
-    const openButtons = document.querySelectorAll(".tooltip-element");
-
-    // Add event listeners to close buttons
-    closeButtons.forEach((closeButton) => {
-      closeButton.addEventListener("click", (e) => {
-        console.log("clicked");
-        handleButtonClick(e, false);
-      });
-    });
-
-    // Add event listeners to open buttons
-    openButtons.forEach((openButton) => {
-      openButton.addEventListener("click", (e) => {
-        console.log("clicked again");
-        handleButtonClick(e, true);
-      });
-    });
+    document.addEventListener("click", handleTooltipButtonClick);
   }
-});
+}
 
-// Details code
-// Details code
-// Details code
+function handleTooltipButtonClick(e) {
+  const target = e.target;
+  if (target.matches(".tooltip-custom .mobile-only")) {
+    handleButtonClick(e, false);
+    console.log("clicked");
+  } else if (target.matches(".tooltip-element")) {
+    handleButtonClick(e, true);
+    console.log("clicked again");
+  }
+}
 
-const afterElements = document.querySelectorAll(".close-folded-step");
+function handleButtonClick(e, isVisible) {
+  e.preventDefault();
+  const tooltip = e.target
+    .closest(".tooltip-custom")
+    .querySelector(".tooltiptext");
+  const tooltipElement = e.target
+    .closest(".tooltip-custom")
+    .querySelector(".tooltip-element");
 
-afterElements.forEach((element) => {
-  element.addEventListener("click", () => {
-    const summaryElement = document.querySelector("details.folding summary");
-    summaryElement.click();
-  });
-});
+  tooltip.style.visibility = isVisible ? "visible" : "hidden";
+  tooltipElement.style.background = isVisible ? "$more-bg" : "none";
+}
 
-function filterTerms(category) {
-  var terms = document.querySelectorAll(".term");
-  var sections = document.querySelectorAll(".alphabet-section");
+function initFoldedSteps() {
+  // Check if any folded step elements are present on the page
+  if (!document.querySelector(".close-folded-step")) return;
 
-  terms.forEach(function (term) {
-    if (category === "all" || term.classList.contains(category)) {
-      term.style.display = "block";
-    } else {
-      term.style.display = "none";
-    }
-  });
-
-  sections.forEach(function (section) {
-    var visibleTerms = section.querySelectorAll(
-      ".term:not([style='display: none;'])"
-    );
-    if (visibleTerms.length > 0) {
-      section.style.display = "block";
-    } else {
-      section.style.display = "none";
-    }
+  document.querySelectorAll(".close-folded-step").forEach((element) => {
+    element.addEventListener("click", handleFoldedStepClick);
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var buttons = document.querySelectorAll(".filter-button");
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      buttons.forEach(function (btn) {
-        btn.classList.remove("active");
-      });
-      // Add active class to the clicked button
-      button.classList.add("active");
-      var category = button.getAttribute("data-filter");
-      filterTerms(category);
-    });
+function handleFoldedStepClick() {
+  const summaryElement = document.querySelector("details.folding summary");
+  summaryElement.click();
+}
+
+function initFilterButtons() {
+  // Check if any filter button elements are present on the page
+  if (!document.querySelector(".filter-button")) return;
+
+  console.log("init");
+  const buttons = document.querySelectorAll(".filter-button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", handleFilterButtonClick);
   });
-});
+}
+
+function handleFilterButtonClick(e) {
+  const buttons = document.querySelectorAll(".filter-button");
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  const button = e.target.closest(".filter-button"); // Use closest to ensure the correct element is selected
+  if (button) {
+    // Check that a button element was found
+    button.classList.add("active");
+    const category = button.getAttribute("data-filter");
+    filterTerms(category);
+  }
+}
+
+function filterTerms(category) {
+  const terms = document.querySelectorAll(".term");
+  const sections = document.querySelectorAll(".alphabet-section");
+
+  terms.forEach((term) => {
+    term.style.display =
+      category === "all" || term.classList.contains(category)
+        ? "block"
+        : "none";
+  });
+
+  sections.forEach((section) => {
+    const visibleTerms = section.querySelectorAll(
+      ".term:not([style='display: none;'])"
+    );
+    section.style.display = visibleTerms.length > 0 ? "block" : "none";
+  });
+}
